@@ -1,4 +1,4 @@
 This is a Web App
 
 
-![Logo](images/logo.png)
+![Logo](images/icon.jpg)
