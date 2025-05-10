@@ -1,4 +1,4 @@
 This is a Web App
-
-
-![Logo](images/icon.png)
+<br>
+<hr>
+<img src="images/icon.png" width="400" title="Icon of the App?"/> 
