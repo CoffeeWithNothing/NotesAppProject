@@ -25,9 +25,9 @@ unset($_SESSION['errors'], $_SESSION['old_input']);
 </head>
 <body>
 
-<nav class="d-flex flex-wrap align-items-center bg-dark px-4 justify-content-center justify-content-sm-start" style="height: 85px;">
+<nav class="d-flex flex-wrap align-items-center px-4 justify-content-center justify-content-sm-start" style="height: 100px;">
     <!-- Logo Section -->
-    <a href="index.php" aria-label="Bunnotes" class="d-flex align-items-center flex-shrink-0 me-3">
+    <a href="index.php" aria-label="Bunnotes" class="d-flex align-items-center flex-shrink-0">
         <img src="images/icon.png" alt="Bunnotes Logo" style="width: 135px; height: 135px; object-fit: contain; margin-top: -18px;">
     </a>
 
@@ -65,7 +65,7 @@ unset($_SESSION['errors'], $_SESSION['old_input']);
 <div class="container-fluid mt-5">
     <div class="row justify-content-center">
         <div class="col-12 col-md-8 col-lg-6"> <!-- Responsive width -->
-            <div class="card-body p-4 p-md-5 bg-dark"> <!-- Responsive padding -->
+            <div class="card-body p-3 p-md-5 bg-dark"> <!-- Responsive padding -->
                 <h2 class="card-title text-center mb-4">
                     Bienvenido de Nuevo!
                     <br>

@@ -21,7 +21,7 @@ $email = $_SESSION['email'];
     <link rel="shortcut icon" href="images/icon2.jpg" type="image/x-icon">
 
     <!-- Page Title  -->
-    <title>Home - Bunnotes</title>
+    <title>Perfil - Bunnotes</title>
 </head>
 <body>
 
@@ -78,11 +78,17 @@ $email = $_SESSION['email'];
   <div class="row">
     <div class="col-12 p-3 m-3  border div-primary">
 
-    <h1>Bunnotes - Home</h1>
-    <p>Bienvenidoooo <?php echo $user ?>!</p>
-    <p>Recuerda tu email: <?php echo $email ?>!</p>
+    <h1>Ajustes del Perfil</h1>
+    <hr>
+    <p>Nombre de Usuario: <?php echo $user ?></p>
+    <p>Correo: <?php echo $email ?></p>
+
     <a href="register.php">Ir al registro</a>
+    <br>
     <a href="logIn.php">Ir al Log In</a>
+    <br>
+    <a href="index.php">Ir al Home</a>
+    <br>
 
     </div>
   </div>
