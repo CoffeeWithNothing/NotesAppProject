@@ -21,7 +21,7 @@ unset($_SESSION['errors'], $_SESSION['old_input']);
     <link rel="shortcut icon" href="images/icon2.jpg" type="image/x-icon">
 
     <!-- Page Title  -->
-    <title>Registro - Bunnotes</title>
+    <title>Iniciar Sesión - Bunnotes</title>
 </head>
 <body>
 
@@ -53,7 +53,7 @@ unset($_SESSION['errors'], $_SESSION['old_input']);
             </svg>
         </button>
 
-        <a href="logIn.php" class="mb-4 text-decoration-none mx-4 text-white btn btn-outline-light btn-sm text-nowrap d-none d-sm-inline text-btn mb-4 fw-semibold">Iniciar Sesión</a>
+        <a href="register.php" class="mb-4 text-decoration-none mx-4 text-white btn btn-outline-light btn-sm text-nowrap d-none d-sm-inline text-btn mb-4 fw-semibold">Regístrate</a>
     </div>
 
     <!-- Right-aligned empty space (for future menu, user profile, etc.) -->
@@ -67,7 +67,9 @@ unset($_SESSION['errors'], $_SESSION['old_input']);
         <div class="col-12 col-md-8 col-lg-6"> <!-- Responsive width -->
             <div class="card-body p-4 p-md-5 bg-dark"> <!-- Responsive padding -->
                 <h2 class="card-title text-center mb-4">
-                    Crea tu usuario para empezar a crear y guardar notas:
+                    Bienvenido de Nuevo!
+                    <br>
+                    Inicia Sesión:
                 </h2>
                 
                 <!-- Error Messages -->
@@ -78,22 +80,7 @@ unset($_SESSION['errors'], $_SESSION['old_input']);
                     <div class="alert alert-danger"><?= htmlspecialchars($error) ?></div>
                 <?php endif; ?>
 
-                <form action="registerUser.php" method="post" novalidate>
-                    <!-- Username Field -->
-                    <div class="mb-3">
-                        <label for="username" class="form-label">Nombre de Usuario</label>
-                        <input type="text"
-                            class="form-control <?= isset($errors['username']) ? 'is-invalid' : '' ?>"
-                            id="username"
-                            name="username"
-                            value="<?= htmlspecialchars($old['username'] ?? '') ?>"
-                            required
-                            pattern="[a-zA-Z0-9_]{3,20}"
-                            title="3-20 caracteres (Se admiten letras, números y guiones bajos)"/>
-                        <div class="invalid-feedback">
-                            <?= $errors['username'] ?? 'Por favor ingresa un nombre de usuario válido' ?>
-                        </div>
-                    </div>
+                <form action="logInUser.php" method="post" novalidate>
 
                     <!-- Email Field -->
                     <div class="mb-3">
@@ -126,34 +113,20 @@ unset($_SESSION['errors'], $_SESSION['old_input']);
                         </div>
                     </div>
 
-                    <!-- Confirm Password -->
-                    <div class="mb-3">
-                        <label for="password2" class="form-label">Confirmar Contraseña</label>
-                        <input type="password"
-                            class="form-control <?= isset($errors['password2']) ? 'is-invalid' : '' ?>"
-                            id="password2"
-                            name="password2"
-                            required
-                            title="Las contraseñas deben coincidir"/>
-                        <div class="invalid-feedback">
-                            <?= $errors['password2'] ?? 'Las contraseñas deben coincidir' ?>
-                        </div>
-                    </div>
-
                     <div class="d-flex justify-content-center">
                         <button type="submit"
                                 class="btn btn-primary btn-sm w-100"
                                 style="max-width: 200px;"
                                 name="submit">
-                            <b>Registrarse</b>
+                            <b>Iniciar sesión</b>
                         </button>
                     </div>
 
                 
-                    <!-- Log in link  -->
+                    <!-- Register link  -->
                     <div class="d-flex justify-content-center">
                         <a href="logIn.php" class="text-white">
-                            ¿Ya tienes cuenta?
+                            ¿No tienes cuenta?
                         </a>
                     </div>
 
