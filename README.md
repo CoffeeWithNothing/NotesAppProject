@@ -13,4 +13,4 @@ El <b>MVP</b> (Minimum Viable Product) de esta aplicación será lo siguiente:
 </ul>
 <br>
 <hr>
-<img src="images/icon.png" alt="Icon of the App" title="Icon of the App?" style="width=300px; height=auto margin=auto;"/> 
+<img src="images/icon.png" alt="Icon of the App" title="Icon of the App?" width="300"/> 
