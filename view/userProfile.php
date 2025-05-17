@@ -15,10 +15,10 @@ $email = $_SESSION['email'];
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="../css/style2.css">
 
     <!-- Favicon  -->
-    <link rel="shortcut icon" href="images/icon2.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="../images/icon2.jpg" type="image/x-icon">
 
     <!-- Page Title  -->
     <title>Perfil - Bunnotes</title>
@@ -27,8 +27,8 @@ $email = $_SESSION['email'];
 
 <nav class="d-flex flex-wrap align-items-center px-4 justify-content-center justify-content-sm-start" style="height: 100px;">
     <!-- Logo Section -->
-    <a href="index.php" aria-label="Bunnotes" class="d-flex align-items-center flex-shrink-0">
-        <img src="images/icon.png" alt="Bunnotes Logo" style="width: 135px; height: 135px; object-fit: contain; margin-top: -18px;">
+    <a href="home.php" aria-label="Bunnotes" class="d-flex align-items-center flex-shrink-0">
+        <img src="../images/icon.png" alt="Bunnotes Logo" style="width: 150px; height: 150px; object-fit: contain; margin-top: -25px;">
     </a>
 
     <!-- Group Title and Language Selector -->
@@ -58,7 +58,7 @@ $email = $_SESSION['email'];
 
         <a href="userProfile.php" class="mb-4 text-decoration-none mx-3 text-white btn btn-outline-light btn-sm text-nowrap d-none d-md-inline text-btn mb-4 fw-semibold">Ajustes</a>
 
-        <a href="logOut.php" class="mb-4 text-decoration-none me-3 text-white btn btn-outline-light btn-sm text-nowrap d-none d-md-inline text-btn mb-4 fw-semibold">Cerrar Sesión</a>
+        <a href="../controller/logOut.php" class="mb-4 text-decoration-none me-3 text-white btn btn-outline-light btn-sm text-nowrap d-none d-md-inline text-btn mb-4 fw-semibold">Cerrar Sesión</a>
 
         <a href="userProfile.php"
         class="btn mb-4 ms-3 btn-outline-light btn-sm rounded-circle p-2 d-inline-flex align-items-center justify-content-center text-nowrap"
@@ -87,7 +87,7 @@ $email = $_SESSION['email'];
     <br>
     <a href="logIn.php">Ir al Log In</a>
     <br>
-    <a href="index.php">Ir al Home</a>
+    <a href="home.php">Ir al Home</a>
     <br>
 
     </div>

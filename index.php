@@ -1,10 +1,3 @@
-<?php
-session_start();
-$user = $_SESSION['username'];
-$email = $_SESSION['email'];
-
-?>
-
 <!DOCTYPE html>
 <html lang="es-ES">
 <head>
@@ -15,7 +8,7 @@ $email = $_SESSION['email'];
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="css/style2.css">
 
     <!-- Favicon  -->
     <link rel="shortcut icon" href="images/icon2.jpg" type="image/x-icon">
@@ -28,48 +21,39 @@ $email = $_SESSION['email'];
 <nav class="d-flex flex-wrap align-items-center px-4 justify-content-center justify-content-sm-start" style="height: 100px;">
     <!-- Logo Section -->
     <a href="index.php" aria-label="Bunnotes" class="d-flex align-items-center flex-shrink-0">
-        <img src="images/icon.png" alt="Bunnotes Logo" style="width: 135px; height: 135px; object-fit: contain; margin-top: -18px;">
+        <img src="images/icon.png" alt="Bunnotes Logo" style="width: 150px; height: 150px; object-fit: contain; margin-top: -25px;">
     </a>
 
     <!-- Group Title and Language Selector -->
     <div class="d-flex align-items-center flex-grow-1 justify-content-center justify-content-sm-start">
-        <h1 class="mb-4 me-3 fs-3 fw-semibold d-none d-sm-inline">Tus archivos</h1>
+        <h1 class="mb-4 fs-3 fw-semibold">Bunnotes</h1>
 
         <!-- Separator -->
-        <div role="separator" class="border-end border-light mb-4" style="height: 60px;"></div>
-    </div>
+        <div role="separator" class="border-end border-light mx-4 d-none d-sm-inline mb-4" style="height: 65px;"></div>
 
-    <!-- Right-aligned Buttons -->
-    <div class="ms-auto d-flex align-items-center">
         <!-- lang-btn is my class inside the css  -->
         <button type="button"
             aria-haspopup="dialog"
             aria-expanded="false"
             aria-label="Idioma: Español"
-            class="btn btn-outline-light btn-sm text-nowrap d-none d-md-inline mb-4 text-btn fw-semibold">
-            Button for something
+            class="btn btn-outline-light btn-sm text-nowrap d-none d-sm-inline mb-4 text-btn fw-semibold fs-6">
+            Español (España)
             <!-- chevronDown is my class for the JS  -->
             <svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 30 30"
                 class="chevronDown"
                 style="width: 10px; height: 100%; display: inline; fill: currentColor; flex-shrink: 0; margin-left: 4px;">
                 <polygon points="15,17.4 4.8,7 2,9.8 15,23 28,9.8 25.2,7 "></polygon>
-            </svg>  
+            </svg>
         </button>
 
-        <a href="userProfile.php" class="mb-4 text-decoration-none mx-3 text-white btn btn-outline-light btn-sm text-nowrap d-none d-md-inline text-btn mb-4 fw-semibold">Ajustes</a>
+        <a href="view/register.php" class="mb-4 text-decoration-none mx-4 text-white btn btn-outline-light btn-sm text-nowrap d-none d-sm-inline text-btn mb-4 fw-semibold fs-6">Regístrate</a>
 
-        <a href="logOut.php" class="mb-4 text-decoration-none me-3 text-white btn btn-outline-light btn-sm text-nowrap d-none d-md-inline text-btn mb-4 fw-semibold">Cerrar Sesión</a>
+        <a href="view/logIn.php" class="mb-4 text-decoration-none text-white btn btn-outline-light btn-sm text-nowrap d-none d-sm-inline text-btn mb-4 fw-semibold fs-6">Inicia Sesión</a>
+    </div>
 
-        <a href="userProfile.php"
-        class="btn mb-4 ms-3 btn-outline-light btn-sm rounded-circle p-2 d-inline-flex align-items-center justify-content-center text-nowrap"
-        style="width: 40px; height: 40px;"
-        aria-label="User Profile">
-
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16" aria-hidden="true">
-            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
-            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
-        </svg>
-</a>
+    <!-- Right-aligned empty space (for future menu, user profile, etc.) -->
+    <div style="flex: 1 1 0%;"></div>
+</nav>
 
     </div>
 </nav>
@@ -78,11 +62,17 @@ $email = $_SESSION['email'];
   <div class="row">
     <div class="col-12 p-3 m-3  border div-primary">
 
-    <h1>Bunnotes - Home</h1>
-    <p>Bienvenidoooo <?php echo $user ?>!</p>
-    <p>Recuerda tu email: <?php echo $email ?>!</p>
-    <a href="register.php">Ir al registro</a>
-    <a href="logIn.php">Ir al Log In</a>
+    <!-- h1 header  -->
+    <h1>Landing Page</h1>
+    <p>¡Tu aplicación de notas centralizada para ti y para tu equipo!</p>
+
+
+
+    <!-- Links -->
+
+    <a href="view/register.php">Ir al registro</a>
+    <br>
+    <a href="view/logIn.php">Ir al Log In</a>
 
     </div>
   </div>
