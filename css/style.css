@@ -2,11 +2,13 @@
 body{
     padding: 25px;
     color: snow;
-    background-color: #212121;
+    background-color: #181818;
 }
 
 nav {
     border-radius: 10px;
+    background-color: #212121 !important;
+
 }
 
 /* The whole card body of the form  */
@@ -34,6 +36,12 @@ nav {
 
 .btn-primary {
 background-color: rgb(120, 0, 120) !important;
+border-color: rgb(190, 0, 190) !important;
+  color: white;
+}
+
+
+.div-primary {
 border-color: rgb(190, 0, 190) !important;
   color: white;
 }

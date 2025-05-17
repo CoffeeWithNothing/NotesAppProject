@@ -19,7 +19,7 @@ try {
     die("Error creating database: " . $e->getMessage());
 }
 
-// Now connect to the database (you can reuse $pdo from db_connection.php if it connects to the DB)
+// Now connect to the database (you can reuse $pdo from model/db_connection.php if it connects to the DB)
 try {
     $tables = [
         "CREATE TABLE IF NOT EXISTS `users` (

@@ -38,11 +38,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $_SESSION['username'] = $user['username'];
                 $_SESSION['email'] = $user['email'];
 
-                // Update login
+                // Update 
                 $update = $pdo->prepare("UPDATE users SET last_login = NOW() WHERE id = ?");
                 $update->execute([$user['id']]);
 
-                header("Location: index.php"); // Redirect to  home
+                header("Location: ../view/home.php"); // Redirect to  home
                 exit();
             } else {
                 $errors['general'] = "Correo electrónico o contraseña incorrectos";
@@ -59,11 +59,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['old_input'] = [
             'email' => $email
         ];
-        header("Location: logIn.php");
+        header("Location: ../view/logIn.php");
         exit();
     }
 } else {
     // Random error
-    header("Location: logIn.php");
+    header("Location: ../view/logIn.php");
     exit();
 }

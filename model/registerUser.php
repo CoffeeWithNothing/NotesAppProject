@@ -87,7 +87,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             
             // Registration successful
             $_SESSION['registration_success'] = true;
-            header("Location: index.php");
+            header("Location: ../view/home.php");
             $_SESSION['username'] = $username;
             $_SESSION['email'] = $email;
             exit();
@@ -105,11 +105,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'username' => $username,
             'email' => $email
         ];
-        header("Location: register.php");
+        header("Location: ../view/register.php");
         exit();
     }
 } else {
     // Radnom error?
-    // header("Location: register.php");
+    // header("Location: ../view/register.php");
     exit();
 }
