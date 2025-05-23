@@ -31,7 +31,7 @@ unset($_SESSION['errors'], $_SESSION['old_input']);
         <img src="../images/icon.png" alt="Bunnotes Logo" style="width: 150px; height: 150px; object-fit: contain; margin-top: -25px;">
     </a>
 
-    <!-- Group Title and Language Selector -->
+    <!-- Register H1 -->
     <div class="d-flex align-items-center flex-grow-1 justify-content-center justify-content-sm-start">
         <h1 class="mb-4 fs-3 fw-semibold">Registro</h1>
 
@@ -53,7 +53,7 @@ unset($_SESSION['errors'], $_SESSION['old_input']);
             </svg>
         </button>
 
-        <a href="../model/logIn.php" class="mb-4 text-decoration-none mx-4 text-white btn btn-outline-light btn-sm text-nowrap d-none d-sm-inline text-btn mb-4 fw-semibold fs-6">Iniciar Sesión</a>
+        <a href="logIn.php" class="mb-4 text-decoration-none mx-4 text-white btn btn-outline-light btn-sm text-nowrap d-none d-sm-inline text-btn mb-4 fw-semibold fs-6">Iniciar Sesión</a>
     </div>
 
     <!-- Right-aligned empty space (for future menu, user profile, etc.) -->
@@ -78,7 +78,7 @@ unset($_SESSION['errors'], $_SESSION['old_input']);
                     <div class="alert alert-danger"><?= htmlspecialchars($error) ?></div>
                 <?php endif; ?>
 
-                <form action="registerUser.php" method="post" novalidate>
+                <form action="../model/registerUser.php" method="post" novalidate>
                     <!-- Username Field -->
                     <div class="mb-3">
                         <label for="username" class="form-label">Nombre de Usuario</label>
@@ -142,7 +142,7 @@ unset($_SESSION['errors'], $_SESSION['old_input']);
 
                     <div class="d-flex justify-content-center">
                         <button type="submit"
-                                class="btn btn-primary btn-sm w-100"
+                                class="btn btn-primary btn-sm w-100 p-2 m-2"
                                 style="max-width: 200px;"
                                 name="submit">
                             <b>Registrarse</b>

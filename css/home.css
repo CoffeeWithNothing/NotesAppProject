@@ -1,0 +1,71 @@
+/* For the whole page. Black background and white font */
+body{
+    padding: 25px;
+    color: snow;
+    background-color: #181818;
+
+}
+
+nav {
+    border-radius: 10px;
+    background-color: #212121 !important;
+
+}
+
+
+.div-primary {
+border-color: rgb(190, 0, 190) !important;
+border-radius: 15px;
+
+  color: white;
+}
+
+/* The arrow of the language selector  */
+.text-btn:hover {
+    color: #000 !important;
+}
+
+
+.btn-primary {
+background-color: rgb(120, 0, 120) !important;
+border-color: rgb(190, 0, 190) !important;
+  color: white;
+}
+
+    .btn-primary:hover {
+    background-color: rgb(110, 0, 110) !important;
+    border-color: rgb(190, 0, 190) !important;
+    color: white;
+    }
+
+a{
+    text-decoration: none;
+}
+    a:hover{
+        text-decoration: underline;
+    }
+
+
+#canvas {
+    border:1px solid rgb(120, 0, 120);
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+    /* Custom animation for offcanvas-start */
+    /* https://cubic-bezier.com/#0,.96,1,-0.01*/
+    
+
+    /* x1, y1: The coordinates of the first control point. */
+
+    /* x2, y2: The coordinates of the second control point. */
+
+    .offcanvas.offcanvas-start {
+    transition: transform 0.1s cubic-bezier(.77,0,.18,1);
+    }
+    .offcanvas.offcanvas-start:not(.show) {
+    transform: translateX(-100%);
+    }
+    .offcanvas.offcanvas-start.show {
+    transform: translateX(0);
+    }

@@ -31,9 +31,9 @@ $email = $_SESSION['email'];
         <img src="../images/icon.png" alt="Bunnotes Logo" style="width: 150px; height: 150px; object-fit: contain; margin-top: -25px;">
     </a>
 
-    <!-- Group Title and Language Selector -->
+    <!-- Settings Button -->
     <div class="d-flex align-items-center flex-grow-1 justify-content-center justify-content-sm-start">
-        <h1 class="mb-4 me-3 fs-3 fw-semibold d-none d-sm-inline">Tus archivos</h1>
+        <h1 class="mb-4 me-3 fs-3 fw-semibold d-none d-sm-inline">Ajustes de Cuenta</h1>
 
         <!-- Separator -->
         <div role="separator" class="border-end border-light mb-4" style="height: 60px;"></div>

@@ -90,6 +90,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             header("Location: ../view/home.php");
             $_SESSION['username'] = $username;
             $_SESSION['email'] = $email;
+            // First, create a file for the new user. This will also return the $_SESSION['id']
+
+            require_once "createFile.php";
+
+            // Then, save the files to the $Session
+            require_once "getFiles.php";
             exit();
             
         } catch (PDOException $e) {

@@ -19,12 +19,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = $_POST['password'] ?? '';
     if (empty($password)) {
         $errors['password'] = "La contraseña es obligatoria";
-    } elseif (strlen($password) < 8) {
-        $errors['password'] = "La contraseña debe tener al menos 8 caracteres";
-    } elseif (!preg_match('/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/', $password)) {
-        $errors['password'] = "La contraseña debe contener al menos una mayúscula, una minúscula y un número";
-    }
-
+    } 
+    
     // If no errors, do login
     if (empty($errors)) {
         try {
@@ -37,6 +33,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $_SESSION['user_id'] = $user['id'];
                 $_SESSION['username'] = $user['username'];
                 $_SESSION['email'] = $user['email'];
+                $_SESSION['registration_success'] = true;
+                require_once "getFiles.php";
 
                 // Update 
                 $update = $pdo->prepare("UPDATE users SET last_login = NOW() WHERE id = ?");
@@ -45,11 +43,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 header("Location: ../view/home.php"); // Redirect to  home
                 exit();
             } else {
-                $errors['general'] = "Correo electrónico o contraseña incorrectos";
+                $errors['password'] = "Correo electrónico o contraseña incorrectos";
             }
         } catch (PDOException $e) {
             error_log("Database error: " . $e->getMessage());
-            $errors['general'] = "Error en el sistema. Por favor intenta más tarde.";
+            $errors['password'] = "Error en el sistema. Por favor intenta más tarde.";
         }
     }
 

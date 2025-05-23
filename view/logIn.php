@@ -31,7 +31,7 @@ unset($_SESSION['errors'], $_SESSION['old_input']);
         <img src="../images/icon.png" alt="Bunnotes Logo" style="width: 150px; height: 150px; object-fit: contain; margin-top: -25px;">
     </a>
 
-    <!-- Group Title and Language Selector -->
+    <!-- log In -->
     <div class="d-flex align-items-center flex-grow-1 justify-content-center justify-content-sm-start">
         <h1 class="mb-4 fs-3 fw-semibold">Inicio de Sesión</h1>
 
@@ -115,7 +115,7 @@ unset($_SESSION['errors'], $_SESSION['old_input']);
 
                     <div class="d-flex justify-content-center">
                         <button type="submit"
-                                class="btn btn-primary btn-sm w-100"
+                                class="btn btn-primary btn-sm w-100 p-2 m-2"
                                 style="max-width: 200px;"
                                 name="submit">
                             <b>Iniciar sesión</b>
